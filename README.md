@@ -20,18 +20,28 @@ The purpose of this analysis is to create a binary classification model using de
 <img width="581" alt="Screenshot 2024-04-26 100701.png" src="https://github.com/Shivabajelan/deep-learning-challenge/blob/main/images/Screenshot_2024-04-26_100701.png">
 This model did not achive desired accuracy of 75%.
 The accuracy achived was 72.3%. 
-<img width="485" alt="Screenshot 2023-04-27 at 10 37 33 pm" src="https://github.com/Shivabajelan/deep-learning-challenge/blob/main/images/Screenshot_2024-04-26_100701.png">
+<img width="485" alt="Screenshot 2023-04-27 at 10 37 33 pm" src="https://github.com/Shivabajelan/deep-learning-challenge/blob/main/images/Screenshot_2024-04-26_101120.png">
 
-In this project, we ran about 4 models. The first few models removed the EIN and NAME columns and with applying difirrent neurons and layers and binning just achived accuracy of 73%.
-
-Model "Final-AlphabetSoupCharity_Optimisation.ipynb has the best accuracy of 78.5%.
+In this project, we ran about 4 models. The first 3 models removed the EIN and NAME columns and with applying difirrent neurons and layers and binning as bellow:
+* Attempt1: Use same structure but different number of nurons in each layer and increasing the Epoch from 50 t0 100.
+   * Accuracy increased very slightly to 72.7%
+* Attempt 2: Optimising the structure using the Keras Tuner
+  * Allow activation function to choose between relu, sigmoid, tanh
+  * sigmoid is still the only option for the final layer
+  * Allow number of neurons to vary from 6 to ~75
+  * Accuracy increased to 73.1%
+*  Attempt 3:
+Try using few neurons (< number of features) with sigmoid activation function for non input layer
+   * Accuracy decreased to 72.6%
+##### The details of the 3 first attempts are provided in the AlphabetSoupCharity_Optimisation.ipynb.
+* Attempt4: the final attempt that can be find in the Final-AlphabetSoupCharity_Optimisation.ipynb has the best accuracy of 78.5%.
 <img width="482" alt="Screenshot 2023-04-27 at 10 37 25 pm" src="https://github.com/Shivabajelan/deep-learning-challenge/blob/main/images/Final_Screenshot_2024-04-26_103511.png">
 
 Our **Feature variable(s) for the model:** The feature variables for the model include `APPLICATION_TYPE`, `AFFILIATION`, `CLASSIFICATION`, `USE_CASE`, `ORGANIZATION`, `STATUS`, `INCOME_AMT`, `SPECIAL_CONSIDERATIONS`, `NAME` and `ASK_AMT`. and **Target variable(s) for the model:** The target variable for the model is `IS_SUCCESSFUL`. The model consists of three hidden layers with 14, 7, and 1 neurons, respectively, The output layer uses a sigmoid activation function for binary classification and used Relu for other layers.
 <img width="595" alt="Screenshot 2023-04-27 at 10 37 20 pm" src="https://github.com/Shivabajelan/deep-learning-challenge/blob/main/images/Final_Screenshot_2024-04-26_103413.png">
 
 
-- **Achievement of the target model performance:** The model did achieve the target performance of 78.85% accuracy. However, multiple attempts were made to optimize the model, including adjusting input data, modifying the structure of the neural network, and modifying the training regimen.
+- **Achievement of the target model performance:** The model did achieve the target performance of 78.5% accuracy. However, multiple attempts were made to optimize the model, including adjusting input data, modifying the structure of the neural network, and modifying the training regimen.
 
 - **Steps taken in attempts to increase model performance:** To increase model performance, the following steps were taken:
 
