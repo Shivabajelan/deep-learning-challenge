@@ -54,5 +54,5 @@ Our **Feature variable(s) for the model:** The feature variables for the model i
 
 ### Summary
 
-The deep learning model achieved the desired performance of 78.84% accuracy in predicting the success of Alphabet Soup-funded organizations. Several attempts were made to optimize the model through data preprocessing and neural network structure adjustments, ultimately leading to this improved performance.
+The deep learning model achieved the desired performance of 78.5% accuracy in predicting the success of Alphabet Soup-funded organizations. Several attempts were made to optimize the model through data preprocessing and neural network structure adjustments, ultimately leading to this improved performance.
 
